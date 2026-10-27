@@ -1,0 +1,11 @@
+{
+  "name": "viral-editor",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg fonts-montserrat fonts-dejavu-core && pip install -r requirements.txt",
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": { "label": "Viral Editor", "onAutoForward": "openBrowser" }
+  },
+  "hostRequirements": { "cpus": 4 },
+  "customizations": { "vscode": { "extensions": ["ms-python.python"] } }
+}
